@@ -1,8 +1,4 @@
-console.log('hi');
 const form = document.getElementById('address_form');
-const cityValue = form.city.value.toLowerCase();
-const stateValue = form.state.value.toLowerCase();
-console.log(stateValue);
 
 const requestMethod = (method, url, data) => fetch(url, {
   method,
@@ -19,19 +15,17 @@ const requestMethod = (method, url, data) => fetch(url, {
   return response;
 });
 
-const getElectionData = async (city, state) => {
-  const response = await requestMethod('POST', '/', {
-    city,
-    state,
-  });
-  const data = await response.json();
-  return data;
-};
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  console.log(stateValue);
+  const cityValue = form.city.value.toLowerCase();
+  const stateValue = form.state.value.toLowerCase();
 
-  const electionData = await getElectionData(cityValue, stateValue);
+  const getElectionData = requestMethod('POST', '/', {
+    cityValue,
+    stateValue,
+  });
+
+  console.log(getElectionData);
   console.log(stateValue);
 });

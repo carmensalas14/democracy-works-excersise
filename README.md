@@ -6,8 +6,16 @@
 
 - Running
 
-  - To run `npm install` and `npm app`
+  - To run `npm install` and `nodemon app`
 
-- Models Folder
+- models
 
-  - I created a file that would functions to make requests to the turbo vote API.
+  - Created a models folder for functions to fetch elections data from TurboVote. Functions used in routes folder.
+
+- public
+
+  - Created a javascript folder inside of Public to make requests.
+
+- views
+
+  - Homepage with form
