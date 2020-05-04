@@ -6,7 +6,9 @@
 
 - Running
 
-  - To run `npm install` and `nodemon app`
+  - Run `npm install` dependencies
+  - Run `nodemon app` to start server
+  - Open browser and navigate to <http://localhost:8080/>
 
 - models
 
